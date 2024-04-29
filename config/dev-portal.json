@@ -7,11 +7,5 @@
   "faviconUrl": "https://framerusercontent.com/images/Ddf1JkueL62srqOxK7AUbCPQ6s.png",
   "requireAuthentication": false,
   "generateExamples": false,
-  "enableMonetization": true,
-  "monetization": {
-    "provider": "stripe",
-    "publishableKey": "",
-    "pricingTableId": "",
-    "secretKey": ""
-  }
+  "enableMonetization": false
 }
