@@ -84,6 +84,7 @@
         },
         "x-zuplo-route": {
           "corsPolicy": "anything-goes",
+          "label": "Testing",
           "handler": {
             "export": "urlRewriteHandler",
             "module": "$import(@zuplo/runtime)",
