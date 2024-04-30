@@ -11,6 +11,16 @@
     },
     {
       "type": "doc",
+      "label": "Querying From A Dapp",
+      "id": "query-dapp"
+    },
+    {
+      "type": "doc",
+      "label": "Recepies",
+      "id": "recepies"
+    },
+    {
+      "type": "doc",
       "label": "Queries",
       "id": "queries"
     },
@@ -18,16 +28,6 @@
       "type": "doc",
       "label": "Mutations",
       "id": "mutations"
-    },
-    {
-      "type": "doc",
-      "label": "Query from a Dapp",
-      "id": "query-dapp"
-    },
-    {
-      "type": "doc",
-      "label": "Recepies",
-      "id": "recepies"
     }
   ]
 }

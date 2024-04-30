@@ -1,43 +1,21 @@
-# My API
+---
+title: Overview
+---
 
-You can write full markdown in these documents. Syntax highlighting and full
-Github Flavored markdown are supported. To learn more about customizing the
-documentation of this developer portal
-[see the documentation](https://zuplo.com/docs/developer-portal/adding-pages).
+# Overview
 
-```ts
-const response = await fetch("https://echo.zuplo.io", {
-  headers: {
-    "content-type": "application/json",
-  },
-});
+## Introduction to the Fuel GraphQL API
 
-const data = await response.json();
-console.log(data);
-```
+The Fuel GraphQL API allows you to query the Fuel blockchain for a wide range of on-chain data. It can be used to query transactions, balances, block information, and more. You can also use it to simulate and submit transactions on the Fuel network.
 
-## Labore et Dolore
+## Playground
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-culpa qui officia deserunt mollit anim id est laborum.
+The playground is an interactive and graphical IDE that includes a reference for queries, mutations, and types. It also provides query validation and context for the underlying GraphQL schema.
 
-| Item            | Description                                  | Quanity |
-| --------------- | -------------------------------------------- | ------- |
-| ullamco laboris | reprehenderit in voluptate velit esse cillum | 21      |
-| Excepteur sint  | tempor incididunt ut labore                  | 1       |
-| anim id est     | irure dolor in reprehenderit in voluptate    | 82      |
-| non proiden     | cupidatat non proident, sunt in              | 53      |
+You can test out the Fuel GraphQL API playground here:
 
-## Aliquip pariatur
+https://beta-5.fuel.network/playground
 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-deserunt mollit anim id est laborum.
+## RPC Endpoint
 
-- **Item 1** - ullamco laboris nisi ut aliquip ex ea commodo
-- **Item 2** - ullamco laboris nisi ut aliquip ex ea commodo
-- **Item 3** - ullamco laboris nisi ut aliquip ex ea commodo
-- **Item 4** - ullamco laboris nisi ut aliquip ex ea commodo
+https://beta-5.fuel.network/graphql

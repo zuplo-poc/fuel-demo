@@ -1,7 +1,7 @@
 /* Learn about theming here: https://zuplo.com/docs/developer-portal/theme */
 
 :root {
-  --logo-url: url(https://cdn.zuplo.com/dev-portal/v2/made-with-zuplo.svg);
+  --logo-url: url(https://graphql-docs.fuel.network/_next/image/?url=%2FFuel_Logo.png&w=64&q=75);
 }
 
 .light {
@@ -14,12 +14,17 @@
 }
 
 .dark {
-  --background-primary: #1a1f36;
+  --background-primary: #090A0A;
   --font-family-primary: "-apple-system", "BlinkMacSystemFont", "Segoe UI",
     "Roboto", "Helvetica Neue", "Ubuntu", "sans-serif";
   --text-color-h1: #f7fafc;
   --text-color-h2: #f7fafc;
-  --text-color-primary: rgb(193 201 210);
+  --text-color-primary: #a0a0a0;
+  --text-color-href: #00f58c;
+  --text-color-nav-selected: #00f58c;
+  --background-nav-item-selected: #001a0e;
+  --color-nav-divider: transparent;
+  --color-divider: #252525;
 }
 
 /* The logo image */
