@@ -7,5 +7,12 @@
   "faviconUrl": "https://framerusercontent.com/images/Ddf1JkueL62srqOxK7AUbCPQ6s.png",
   "requireAuthentication": false,
   "generateExamples": false,
-  "enableMonetization": false
+  "enableMonetization": true,
+  "authentication": {},
+  "monetization": {
+    "provider": "stripe",
+    "stripePricingTableId": "prctbl_1PEwzTISC4AKw0FnnK1DhgwH",
+    "stripePublishableKey": "pk_test_51PEwwcISC4AKw0FnigkbKOa5c9DLq9RtKUhWCS19X3QkW6NLhyplcKrKcWgQ2UYhqWZSXCPXmNscZ17RLEHo91w300fihB79Ot",
+    "stripeSecretKey": "$env(STRIPE_SECRET_KEY)"
+  }
 }
