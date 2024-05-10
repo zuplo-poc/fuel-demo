@@ -2,7 +2,102 @@
   "openapi": "3.1.0",
   "info": {
     "version": "1.0.0",
-    "title": "My Zuplo API"
+    "title": "Fuel GraphQL API",
+    "description": "The Fuel GraphQL API allows you to query the Fuel blockchain for a wide range of on-chain data. It can be used to query transactions, balances, block information, and more. You can also use it to simulate and submit transactions on the Fuel network."
   },
-  "paths": {}
+  "paths": {
+    "/graphql": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "RPC Endpoint",
+        "description": "The playground is an interactive and graphical IDE that includes a reference for queries, mutations, and types. It also provides query validation and context for the underlying GraphQL schema.\n\n **Playground:** [https://beta-5.fuel.network/playground](https://beta-5.fuel.network/playground)",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "object",
+                      "description": "The response data",
+                      "properties": {
+                        "balance": {
+                          "type": "object",
+                          "properties": {
+                            "owner": {
+                              "type": "string"
+                            },
+                            "amount": {
+                              "type": "string"
+                            },
+                            "assetId": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "examples": {
+                "example_query": {
+                  "summary": "Example GraphQL Query",
+                  "value": {
+                    "query": "query Balance($address: Address, $assetId: AssetId) {\nbalance(owner: $address, assetId: $assetId) {\n    owner\n    amount\n    assetId\n  }\n}",
+                    "variables": {
+                      "address": "4242",
+                      "assetId": "2323"
+                    }
+                  }
+                }
+              },
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "query": {
+                    "type": "string",
+                    "description": "The GraphQL query"
+                  },
+                  "variables": {
+                    "type": "object",
+                    "description": "Variables for the GraphQL query"
+                  }
+                },
+                "required": [
+                  "query"
+                ]
+              }
+            }
+          }
+        },
+        "x-zuplo-route": {
+          "corsPolicy": "anything-goes",
+          "label": "Testing",
+          "handler": {
+            "export": "urlRewriteHandler",
+            "module": "$import(@zuplo/runtime)",
+            "options": {
+              "rewritePattern": "https://beta-5.fuel.network/graphql"
+            }
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "operationId": "1e3ddaa9-1337-4baf-950a-ac5f940075e3"
+      }
+    }
+  }
 }

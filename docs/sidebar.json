@@ -3,11 +3,31 @@
     {
       "type": "doc",
       "id": "index",
-      "label": "Index"
+      "label": "Getting Started"
     },
     {
       "type": "api-ref",
       "label": "API Reference"
+    },
+    {
+      "type": "doc",
+      "label": "Querying From A Dapp",
+      "id": "query-dapp"
+    },
+    {
+      "type": "doc",
+      "label": "Recepies",
+      "id": "recepies"
+    },
+    {
+      "type": "doc",
+      "label": "Queries",
+      "id": "queries"
+    },
+    {
+      "type": "doc",
+      "label": "Mutations",
+      "id": "mutations"
     }
   ]
 }

@@ -1,5 +1,11 @@
 {
   "$schema": "https://cdn.zuplo.com/schemas/dev-portal.json",
   "enabled": true,
-  "enableAuthentication": true
+  "enableAuthentication": false,
+  "pageTitle": "Fuel Developer Portal",
+  "sitePathname": "/docs",
+  "faviconUrl": "https://framerusercontent.com/images/Ddf1JkueL62srqOxK7AUbCPQ6s.png",
+  "requireAuthentication": false,
+  "generateExamples": false,
+  "enableMonetization": false
 }
