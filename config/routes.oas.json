@@ -93,7 +93,13 @@
             }
           },
           "policies": {
-            "inbound": []
+            "inbound": [
+              "api-key-inbound",
+              "monetization-inbound"
+            ],
+            "outbound": [
+              "custom-code-outbound"
+            ]
           }
         },
         "operationId": "1e3ddaa9-1337-4baf-950a-ac5f940075e3"

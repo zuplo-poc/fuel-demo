@@ -1,3 +1,45 @@
 {
-  "policies": []
+  "policies": [
+    {
+      "handler": {
+        "export": "ApiKeyInboundPolicy",
+        "module": "$import(@zuplo/runtime)",
+        "options": {
+          "allowUnauthenticatedRequests": false,
+          "cacheTtlSeconds": 60
+        }
+      },
+      "name": "api-key-inbound",
+      "policyType": "api-key-inbound"
+    },
+    {
+      "handler": {
+        "export": "MonetizationInboundPolicy",
+        "module": "$import(@zuplo/runtime)",
+        "options": {
+          "allowRequestsOverQuota": false,
+          "allowedSubscriptionStatuses": [
+            "active",
+            "incomplete",
+            "trialing"
+          ],
+          "meterOnStatusCodes": "200-399",
+          "meters": {
+            "requests": 1,
+            "complexityUnits": 0
+          }
+        }
+      },
+      "name": "monetization-inbound",
+      "policyType": "monetization-inbound"
+    },
+    {
+      "handler": {
+        "export": "default",
+        "module": "$import(./modules/set-cu)"
+      },
+      "name": "custom-code-outbound",
+      "policyType": "custom-code-outbound"
+    }
+  ]
 }
